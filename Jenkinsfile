@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        mvn mymaven
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -9,12 +12,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building Railway Ticket App...'
+                sh 'mvn clean install'
             }
         }
-        stage('Deploy') {
+        stage('test') {
             steps {
-                echo 'Deploying to server...'
+                echo 'testing to server...'
             }
         }
     }
