@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Ticket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Railway Ticket</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <form action="bookTicket" method="post" class="booking-form">
+                <div class="form-group">
+                    <label for="passengerName">Passenger Name:</label>
+                    <input type="text" id="passengerName" name="passengerName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="trainNumber">Select Train:</label>
+                    <select id="trainNumber" name="trainNumber" required>
+                        <option value="">-- Select Train --</option>
+                        <option value="12951">Rajdhani Express (12951)</option>
+                        <option value="12001">Shatabdi Express (12001)</option>
+                        <option value="12245">Duronto Express (12245)</option>
+                        <option value="12951">Garib Rath (12951)</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="source">From:</label>
+                        <input type="text" id="source" name="source" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination">To:</label>
+                        <input type="text" id="destination" name="destination" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Journey Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="coachType">Coach Type:</label>
+                        <select id="coachType" name="coachType" required>
+                            <option value="">-- Select Coach --</option>
+                            <option value="AC">AC</option>
+                            <option value="Sleeper">Sleeper</option>
+                            <option value="General">General</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="numberOfTickets">Number of Tickets:</label>
+                    <input type="number" id="numberOfTickets" name="numberOfTickets" min="1" max="10" required>
+                </div>
+                
+                <button type="submit" class="btn">Book Ticket</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Indian Railways. All rights reserved.</p>
+    </footer>
+</body>
+</html>
